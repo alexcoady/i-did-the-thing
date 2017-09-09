@@ -23,8 +23,6 @@ const persistOptions = {
 
 persistStore(store, persistOptions, () => {
 
-  console.log('Starting app');
-
   // Start app
   Navigation.startSingleScreenApp({
     screen: {
