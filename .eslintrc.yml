@@ -23,6 +23,8 @@ parserOptions:
     jsx: true
   sourceType: module
 rules:
+  no-multiple-empty-lines:
+    - error
   indent:
     - error
     - 2
