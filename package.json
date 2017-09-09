@@ -19,8 +19,14 @@
 		"remote-redux-devtools": "^0.5.12"
 	},
 	"devDependencies": {
+		"babel-eslint": "^7.2.3",
 		"babel-jest": "21.0.2",
 		"babel-preset-react-native": "3.0.2",
+		"eslint": "^4.6.1",
+		"eslint-plugin-flowtype": "^2.35.1",
+		"eslint-plugin-jest": "^21.0.2",
+		"eslint-plugin-react": "^7.3.0",
+		"flow-bin": "^0.54.1",
 		"jest": "21.0.2",
 		"react-test-renderer": "16.0.0-alpha.12"
 	},

@@ -3,6 +3,8 @@
 import React, { PureComponent } from 'react';
 import { Text, View } from 'react-native';
 
+const BUTTON_ID_HISTORY = 'Root/BUTTON_ID_HISTORY';
+
 class Root extends PureComponent<void, void> {
 
   render () {
@@ -13,5 +15,12 @@ class Root extends PureComponent<void, void> {
     );
   }
 }
+
+Root.navigatorButtons = {
+  rightButtons: [{
+    title: 'History',
+    id: BUTTON_ID_HISTORY,
+  }],
+};
 
 export default Root;
