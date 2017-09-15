@@ -1,7 +1,10 @@
 // @flow
-
-// @flow
 // App dependencies
+import type { RecordState } from 'shared/records/types';
+
+export type RootState = {
+  records: RecordState
+};
 
 export type FormProps = {
   array: {
@@ -102,15 +105,3 @@ export type Dispatch = (action: Action | ThunkAction | PromiseAction | Array<Act
 export type GetState = () => Object;
 export type ThunkAction = (dispatch: Dispatch, getState: GetState) => any;
 export type PromiseAction = Promise<Action>;
-
-type Coordinate = {
-  x: number,
-  y: number,
-};
-
-export type Gradient = {
-  colors: string[],
-  locations?: number[],
-  end: Coordinate,
-  start: Coordinate,
-};

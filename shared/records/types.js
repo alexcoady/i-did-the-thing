@@ -10,3 +10,12 @@ export type RootRecord = {
 export type Record = RootRecord & {
   _id: string,
 };
+
+export type RecordDictionary = {
+  [string]: Record,
+};
+
+export type RecordState = {
+  idList: string[],
+  dictionary: RecordDictionary,
+};

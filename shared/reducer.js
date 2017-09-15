@@ -2,9 +2,10 @@
 import { combineReducers } from 'redux';
 import { reducer as form } from 'redux-form';
 
-// Feature dependencies
+// App dependencies
+import records from 'shared/records/reducer';
 
 export default combineReducers({
   form,
-  // [bodyParts.constants.NAME]: bodyParts.reducer,
+  records,
 });

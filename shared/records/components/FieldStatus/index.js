@@ -1,18 +1,32 @@
 // @flow
 // NPM dependencies
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 
-// App dependencies
-import type { FieldProps } from 'shared/types';
+// Feature dependencies
+import type { Status } from './../../types';
 
-type Props = FieldProps;
+// Component dependencies
+import style from './style';
 
-const FieldStatus = ({ input }: Props) => {
+type Props = {
+  update: (Status) => void,
+};
 
+const FieldStatus = ({ update }: Props) => {
+  
   return (
-    <View>
-      <Text>{input.value}</Text>
+    <View style={style.root}>
+      <TouchableOpacity onPress={() => update('YES')}>
+        <View style={style.buttonYes}>
+          <Text style={style.buttonYesText}>I did the thing!</Text>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => update('NO')}>
+        <View style={style.buttonNo}>
+          <Text style={style.buttonNoText}>{'I didn\'t do the thing!'}</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
